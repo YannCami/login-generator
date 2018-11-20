@@ -15,7 +15,7 @@ public class LoginServiceTest {
 
     @Before
     public void setup() {
-        login = new String[]{"a", "b", "c", "dog", "dinosaur", "winner", "chicken", "dinner", "cat"};
+        login = new String[]{"a", "b", "c", "dog", "dinosaur", "winner", "chicken", "dinner", "cat", "zebra"};
         ls = new LoginService(login);
     }
 

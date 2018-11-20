@@ -10,13 +10,13 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class LoginServiceTest {
-    private String[] logins;
+    private String[] login;
     private LoginService ls;
 
     @Before
     public void setup() {
-        logins = new String[]{"a", "b", "c", "dog", "dinosaur", "winner", "chicken", "dinner", "cat"};
-        ls = new LoginService(logins);
+        login = new String[]{"a", "b", "c", "dog", "dinosaur", "winner", "chicken", "dinner", "cat"};
+        ls = new LoginService(login);
     }
 
 
@@ -36,14 +36,14 @@ public class LoginServiceTest {
     public void testFindAllLoginsStartingWith() {
         List<String> startsWithD = ls.findAllLoginsStartingWith("d");
         List<String> expected = Arrays.asList(new String[]{"dinner", "dinosaur", "dog"});
-        assertEquals("The method should return all 3 logins starting with d.", expected, startsWithD);
+        assertEquals("The method should return all 3 login starting with d.", expected, startsWithD);
     }
 
     @Test
     public void testFindAllLogins() {
-        List<String> expected = Arrays.asList(logins);
+        List<String> expected = Arrays.asList(login);
         Collections.sort(expected);
 
-        assertEquals("The method should return all logins given to the constructor.", expected, ls.findAllLogins());
+        assertEquals("The method should return all login given to the constructor.", expected, ls.findAllLogins());
     }
 }

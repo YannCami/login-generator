@@ -31,6 +31,9 @@ public class LoginGeneratorTest {
         //CT3
         loginGenerator.generateLoginForNomAndPrenom("Dùrand", "Paul");
         assertTrue("The loginService should now contain the login PDUR", loginService.loginExists("PDUR"));
+
+        loginGenerator.generateLoginForNomAndPrenom("Du", "Paul");
+        assertTrue("The loginService should now contain the login PDU", loginService.loginExists("PDU"));
     }
 
 }
